@@ -1,0 +1,62 @@
+﻿<Window x:Class="SuperPizzeria.Administration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SuperPizzeria"
+        mc:Ignorable="d"
+        Title="Администрация" Height="529.961" Width="416.651">
+    <Canvas>
+        <Button Name="EmployeeRegButton"  Content="Зарегистрировать сотрудника" Canvas.Left="202" Canvas.Top="441" Width="187" Click="EmployeeRegButton_Click"/>
+
+        <Grid Height="337" Canvas.Left="26" Canvas.Top="50" Width="363" Name="PizzasGrid" Visibility="Visible" >
+            <Border BorderBrush="Black" BorderThickness="2"/>
+            <DataGrid Name="MenuGrid" AutoGenerateColumns="False" CanUserAddRows="False" VerticalScrollBarVisibility="Hidden" SelectionChanged="MenuGrid_SelectionChanged" >
+                <DataGrid.Columns >
+                    <DataGridTextColumn Binding="{Binding Id}" Width="50" Header="Номер"  IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Width="70" Header="Название"  IsReadOnly="True">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Cost}" Header="Цена"  IsReadOnly="True" Width="50"/>
+                    <DataGridTextColumn x:Name="IngridientsInGrid" Binding="{Binding Path=GetIngridientsNames}" Header="Список ингридиентов"  IsReadOnly="True" Width="130">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="TextWrapping" Value="Wrap"></Setter>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridCheckBoxColumn Binding="{Binding IsOnMenu}" Header="В меню" IsReadOnly="False" Width="55"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Height="337" Canvas.Left="26" Canvas.Top="50" Width="363" Name="PizzaGrid" Visibility="Hidden">
+            <Border BorderBrush="Black" BorderThickness="2"/>
+
+            <TextBox Name="PizzaName" HorizontalAlignment="Left" Height="23" Margin="10,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" Text="Название пиццы" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="Цена"/><LineBreak/><Run/></TextBlock>
+            <TextBlock Name="IngridientCost" HorizontalAlignment="Left" Margin="10,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="328" Text="0"></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Text="Ингридиенты" />
+            <DataGrid Name="IngridientsList" AutoGenerateColumns="False" CanUserAddRows="False" SelectionChanged="IngridientsList_SelectionChanged" SelectionMode="Extended" Margin="10,150,10,15">
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Width="159" Header="Ингридиент" Binding="{Binding Path=Name}"></DataGridTextColumn>
+                    <DataGridTextColumn IsReadOnly="True" Width="159" Header="Цена(рублей)" Binding="{Binding Path=Cost}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Label Name="GridLabel" Content="Список пицц" Canvas.Left="26" Canvas.Top="20"/>
+        <Button Name="AddPizzaMenu" Content="Добавление пиццы" Canvas.Left="26" Canvas.Top="392" Width="179" Click="AddPizzaMenu_Click"/>
+        <Button Name="IngridientsControl" Content="Управление ингридиентами" Canvas.Left="26" Canvas.Top="441" Click="IngridientsControl_Click" Width="171"/>
+        <Button Name="SaveChanges" Content="Сохранить изменения" Canvas.Left="26" Canvas.Top="417" Width="363" Click="SaveChanges_Click"/>
+        <Button Name="DeletePizza" Content="Удалить пиццу" Canvas.Left="210" Canvas.Top="392" Click="DeletePizza_Click" Width="179" IsEnabled="False"/>
+        <Button Name="EditPizza" Content="Редактировать пиццу" Canvas.Left="148" Canvas.Top="392"  Width="151" Click="EditPizza_Click" Visibility="Hidden"/>
+        <Button Name="AddPizza" Content="Добавить пиццу" Canvas.Left="26" Canvas.Top="392" Width="179" Visibility="Hidden"/>
+        <Button Name="Back" Content="Назад" Canvas.Left="210" Canvas.Top="392" Width="179" Visibility="Hidden"/>
+        <Button Name="OrderAccounting" Content="Учёт заказов" Canvas.Left="26" Canvas.Top="465" Width="363" Click="OrderAccounting_Click"/>
+        <Button x:Name="Spravka" Content="Справка" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" Click="Spravka_Click" Canvas.Left="340" Canvas.Top="20"/>
+    </Canvas>
+</Window>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SuperPizzeria.Administration" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAhAQAAAAIAAQAgAIAgBIAAwIAAgACQCAABA=</HashCode>
+      <FileName>Administration.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperPizzeria.Authorization" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Authorization.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperPizzeria.AuthReg" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>AuthReg.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperPizzeria.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAqAAAQAgAAABAAoAkAAANAAAAAAABCIAKIAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperPizzeria.Ingridients" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAQAAAACAAAAAQAAAAAAAAAAQAABQAAgAA=</HashCode>
+      <FileName>Ingridients.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperPizzeria.OrdersAccounting" BaseTypeListCollapsed="true">
+    <Position X="10" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEACAwAAiAAAAAAAAAAABAAgAAAAAABAAAAAQ=</HashCode>
+      <FileName>OrdersAccounting.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperPizzeria.Profiler" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAwAACAAAAAAAgAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Profiler.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperPizzeria.Registration" BaseTypeListCollapsed="true">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Registration.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SuperPizzeria.Classes.Functions">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAACAAAAACAAAAAAEAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Classes\Functions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
